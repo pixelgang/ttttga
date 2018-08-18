@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.digiharm.toby" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android = "http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Toby Takes The Train</name>
+	<description>Help fight the ninjas so Toby can go home</description>
+	<author href="digitalharmony.agency" email="support@digitalharmony.agency">Digital Harmony</author>
+
+	<icon src="www/icon-256.png" width="256" height="256" density="xxxhdpi" />
+	<icon src="www/icon-128.png" width="128" height="128" density="xhdpi" />
+
+	<preference name="android-targetSdkVersion" value="26" />
+
+	<preference name="orientation" value="landscape" />
+	<preference name="fullscreen" value="false" />
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="AllowInlineMediaPlayback" value="true" />
+
+	<preference name="deployment-target" value="9.0" />
+	<preference name="android-minSdkVersion" value="21" />
+	<access origin="*" />
+
+	<plugin name="cordova-plugin-ad-admob" />
+	<plugin name="cordova-plugin-inappbrowser" />
+	<plugin name="cordova-plugin-whitelist" />
+
+
+	<engine name="ios" />
+	<engine name="android" />
+</widget>

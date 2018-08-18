@@ -1,0 +1,37 @@
+﻿{
+	"id": "com.digiharm.toby",
+	"version": "1.0",
+	"name": "Toby Takes The Train",
+	"description": "Help fight the ninjas so Toby can go home",
+	"author": "Digital Harmony",
+	"email": "support@digitalharmony.agency",
+	"website": "digitalharmony.agency",
+	"fullscreen": "false",
+	"useragent": null,
+	"orientation": "landscape",
+	"icons": [{
+		"src": "www/icon-256.png",
+		"width": 256,
+		"height": 256,
+		"density": "xxxhdpi"
+	}, {
+		"src": "www/icon-128.png",
+		"width": 128,
+		"height": 128,
+		"density": "xhdpi"
+	}],
+	"plugins": [
+		{ "id": "cordova-plugin-ad-admob", "version": null },
+		{ "id": "cordova-plugin-inappbrowser", "version": null },
+		{ "id": "cordova-plugin-whitelist", "version": null }
+	],
+	"android": {
+		"min": 21,
+		"target": 26,
+		"plugins": []
+	},
+	"ios": {
+		"target": "9.0",
+		"plugins": []
+	}
+}
