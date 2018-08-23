@@ -15083,13 +15083,13 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		if (prevsol.select_all)
 		{
 			clonesol.select_all = true;
-			cr.clearArray(clonesol.else_instances);
 		}
 		else
 		{
 			clonesol.select_all = false;
 			cr.shallowAssignArray(clonesol.instances, prevsol.instances);
 		}
+		cr.clearArray(clonesol.else_instances);
 	};
 	cr.type_popSol = function ()
 	{
@@ -18353,7 +18353,7 @@ cr.plugins_.Browser = function(runtime)
 	var browserPluginReady = false;
 	document.addEventListener("DOMContentLoaded", function ()
 	{
-		if (window["C2_RegisterSW"] && navigator.serviceWorker)
+		if (window["C2_RegisterSW"] && navigator["serviceWorker"])
 		{
 			var offlineClientScript = document.createElement("script");
 			offlineClientScript.onload = function ()
@@ -18466,7 +18466,7 @@ cr.plugins_.Browser = function(runtime)
 	};
 	instanceProto.onSWMessage = function (e)
 	{
-		var messageType = e.data.type;
+		var messageType = e["data"]["type"];
 		if (messageType === "downloading-update")
 			this.runtime.trigger(cr.plugins_.Browser.prototype.cnds.OnUpdateFound, this);
 		else if (messageType === "update-ready" || messageType === "update-pending")
@@ -24779,15 +24779,15 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
+	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
+	cr.plugins_.Text,
+	cr.plugins_.Touch,
 	cr.plugins_.admob,
-	cr.plugins_.Audio,
 	cr.plugins_.Browser,
+	cr.plugins_.Audio,
 	cr.plugins_.Keyboard,
 	cr.plugins_.Function,
-	cr.plugins_.Text,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Touch,
-	cr.plugins_.Sprite,
 	cr.behaviors.Bullet,
 	cr.behaviors.Platform,
 	cr.behaviors.solid,
